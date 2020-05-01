@@ -42,7 +42,7 @@ public class CNN_Testing {
 	@Test(dependsOnMethods = { "Market_03" })
 	public void Market_04() {
 		expectedValue = ExcelRead.returnExcel("./Test Data/Test Data Financial.xlsx", "Most Popular Stocks");
-		System.out.println("Expected value from Test data excel = " + expectedValue);
+		System.out.println("Expected value from Test data excelvalue = " + expectedValue);
 	}
 
 	@Test(dependsOnMethods = { "Market_04" })
