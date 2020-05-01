@@ -38,20 +38,17 @@ public class CNN_Testing {
 		TestCaseThree.getMarketData(driver, actualdata);
 
 	}
-
 	@Test(dependsOnMethods = { "Market_03" })
 	public void Market_04() {
 		expectedValue = ExcelRead.returnExcel("./Test Data/Test Data Financial.xlsx", "Most Popular Stocks");
 		System.out.println("Expected value from Test data excelvalue = " + expectedValue);
 	}
-
 	@Test(dependsOnMethods = { "Market_04" })
 	public void Market_05() {
 
 		new ExcelWriter().wtireExcelListCNN("./Test Data/CNNExcelWrite.xlsx", actualdata);
 
 	}
-
 	@Test(dependsOnMethods = { "Market_05" })
 	public void Market_06() {
 
